@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="sub-heading">Welcome to the app</h2>
+    <h3 class="title">Welcome to the app</h3>
+    <h4 class="title">Welcome to the app</h4>
+    Types of declarations var
+    <br />
+    let, const -> let, const came from es6
+    <br />
+    <b>
+      Re Declaration is only allowed in var.
+      <pre>
+        <code class="language-javascript">
+            var name = "10"  // This will work
+            var name = "20"
+        </code>
+    </pre>
+    </b>
+    <br />
+    Reassignment is allowed only for var and let but not in const
+    <pre>
+        <code class="language-javascript">
+            var name = "10"
+            name = "20"  // Will work
+
+            let name = "10"
+            name = "20" // will work
+        </code>
+    </pre>
+    <b>
+      ES6 Features
+      <ul>
+        <li>let & const</li>
+        <li>`` Template Literal (Fstring)</li>
+        <li>... Spread Operator (unpacking operator)</li>
+        <li>... Rest Operator</li>
+      </ul>
+    </b>
+    <br />
+    <b
+      >ES6+ Features
+      <ul>
+        <li>Numeric seperators 1_00_000</li>
+      </ul>
+    </b>
+    <button id="button" onclick="clicked()">Don't Click</button>
+    <p>Number of times you clicked: <p id="count"></p></p>
+    
+
+    <br />
+    <br />
+ 
+    <h3>Check for driving test</h3>
+    <input type="text" placeholder="Enter your age" id="AgeInput"/>
+    <button onclick="CheckAge()">Check</button>
+    <p id="AgeResult"></p>
+    <!-- <script src="./Day17JS.js"></script>
+    <script src="./Loops.js"></script> -->
+    <script>
+      var h2 = document.getElementById('sub-heading');
+      console.log(h2.innerText);
+      h2.innerText = 'This is super cool'; // update your html
+
+      var titles = document.getElementsByClassName('title');
+      for (title of titles) {
+        console.log(title);
+      }
+      count = 0;
+      function clicked() {
+        console.log('You Clicked the button');
+        tag = document.getElementById('count');
+        tag.innerText = count;
+        count += 1;
+      }
+      function CheckAge(){
+        age = document.getElementById("AgeInput").value;
+        result = document.getElementById("AgeResult");
+        result.innerText = age < 18 ? "You are Not Eligible" : "You are eligible"
+      }
+       // if (age < 18) {
+        //     result.innerText = "You are not Eligible"
+        // }else{
+        //     result.innerText = "You are Eligible"
+        // }
+    </script>
+  </body>
+</html>
